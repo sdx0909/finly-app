@@ -1,8 +1,8 @@
-const USDollar = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
+const INRupee = new Intl.NumberFormat("en-IN", {
+	style: "currency",
+	currency: "INR",
 });
 
 module.exports = {
-  USDollar,
+	INRupee,
 };

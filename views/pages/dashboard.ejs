@@ -13,7 +13,7 @@
             <h3 class="ml-2 text-sm font-medium">Collected</h3>
           </div>
           <p class=" truncate rounded-xl border-slate-200 border px-4 py-8 text-center text-2xl">
-            <%= USDollar.format(totalPaid) %>
+            <%= INRupee.format(totalPaid) %>
           </p>
         </div>
         <div class="rounded-xl bg-white p-2 shadow-sm">
@@ -22,7 +22,7 @@
             <h3 class="ml-2 text-sm font-medium">Pending</h3>
           </div>
           <p class=" truncate rounded-xl border-slate-200 border px-4 py-8 text-center text-2xl">
-            <%= USDollar.format(totalPending) %>
+            <%= INRupee.format(totalPending) %>
           </p>
         </div>
         <div class="rounded-xl bg-white p-2 shadow-sm">
@@ -82,7 +82,7 @@
                   </p>
                 </div>
                 <p class=" truncate font-medium">
-                  <%= USDollar.format(invoice.amount) %>
+                  <%= INRupee.format(invoice.amount) %>
                 </p>
               </div>
               <% }) %>
