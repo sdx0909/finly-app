@@ -19,12 +19,14 @@ const populateInvoices = (query, search) => {
 	};
 	if (search) {
 		populateOptions["match"] = { name: { $regex: search, $options: "i" } };
+
+		return query
+			.populate(populateOptions)
+			.then((invoices) =>
+				invoices.filter((invoices) => invoices.customer != null)
+			);
 	}
-	return query
-		.populate(populateOptions)
-		.then((invoices) =>
-			invoices.filter((invoices) => invoices.customer != null)
-		);
+	return query.populate(populateOptions);
 };
 
 const showInvoices = async (req, res) => {
